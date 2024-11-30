@@ -10,10 +10,21 @@
  */
 
 // Write our function (we must define it too!) below
-// ...
+const joinList = (arr) => {
+  let str = '';
+  if (arr.length > 0) {
+    for (let i = 0; i < (arr.length - 1); i++) {
+      str += arr[i] + ', ';
+    }
+    str += arr[arr.length - 1];
+  }
+  return str;
+};
 
 // Test / Driver Code below...
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
 const concepts = joinList(conceptList);
+const concepts2 = joinList([]);
 
 console.log('Today I learned about', concepts);
+console.log('Today I learned about', concepts2);
